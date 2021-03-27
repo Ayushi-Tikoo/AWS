@@ -1,6 +1,7 @@
 body {
   margin: 0;
-  font-family: "Lato", sans-serif;
+  font-family: 'Bahnschrift';
+  font-size: medium;
 }
 
 .sidebar {
@@ -18,16 +19,18 @@ body {
   color: black;
   padding: 16px;
   text-decoration: none;
+  transition: all 0.3s ease 0s;
 }
 
-.sidebar a.active {
+.selected {
   background-color: #4caf50;
   color: white;
 }
 
-.sidebar a:hover:not(.active) {
+.sidebar a:hover {
   background-color: #555;
   color: white;
+  transition: all 0.3s ease 0s;
 }
 
 div.content {
@@ -35,17 +38,17 @@ div.content {
   padding: 1px 16px;
   height: 1000px;
 }
-#table-content {
-  margin-top: 5%;
-}
+
 @media screen and (max-width: 700px) {
   .sidebar {
     width: 100%;
     height: auto;
     position: relative;
+    transition: all 0.3s ease 0s;
   }
   .sidebar a {
     float: left;
+    transition: all 0.3s ease 0s;
   }
   div.content {
     margin-left: 0;
@@ -56,5 +59,6 @@ div.content {
   .sidebar a {
     text-align: center;
     float: none;
+    transition: all 0.3s ease 0s;
   }
 }

@@ -1,15 +1,19 @@
-import React from "react";
-import "./Dashboard.css";
-import { Link } from "react-router-dom";
+import React from 'react';
+import './Dashboard.css';
+import { NavLink } from 'react-router-dom';
 
 const Dashboard = () => {
   return (
-    <div className="sidebar">
-      <Link to="/home" className="active">
+    <div className='sidebar'>
+      <NavLink activeClassName='selected' to='/home'>
         Home
-      </Link>
-      <Link to="/customers">Customers</Link>
-      <Link to="/customers/add">AddCustomers</Link>
+      </NavLink>
+      <NavLink activeClassName='selected' to='/customers'>
+        Customers
+      </NavLink>
+      <NavLink activeClassName='selected' to='/addcustomers'>
+        AddCustomers
+      </NavLink>
     </div>
   );
 };
